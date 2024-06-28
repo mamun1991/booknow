@@ -1,0 +1,149 @@
+.dateInput input {
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+    padding: 12px;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+    ;
+}
+
+.warningMsgComp {
+    position: fixed;
+    right: 10px;
+}
+
+/* ****************** all transition css here *****************  */
+.showHide-enter-active {
+    transition: all 0.7s ease-in;
+}
+
+.showHide-enter-from {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.showHide-enter-to {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.showHide-leave-active {
+    transition: all 0.7s ease-in;
+}
+
+.showHide-leave-from {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.showHide-leave-to {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.warnMsgTrn-enter-active,
+.warnMsgTrn-leave-active {
+    transition: all 0.5s ease;
+}
+
+.warnMsgTrn-enter-from,
+.warnMsgTrn-leave-to {
+    opacity: 0;
+    transform: translateX(130px);
+}
+
+.dashTransition-enter-active,
+.dashTransition-leave-active {
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.dashTransition-enter-from,
+.dashTransition-leave-to {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.dashTransition-enter-to,
+.dashTransition-leave-from {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1000ms ease-in-out;
+}
+
+.animate-fade-out {
+    animation: fadeOut 1000ms ease-in-out;
+}
+
+.min-h-80 {
+    min-height: 80px;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.8s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(320px);
+    opacity: 0;
+}
+
+.bounce-enter-active {
+    animation: bounce-in 1s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 1s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* ****************** transition css ends here *************** */
